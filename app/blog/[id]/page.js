@@ -29,16 +29,17 @@ const Page = async ({ params }) => {
   }
 
   const post = await response.json();
-  const { title, body } = post || {};
+  const { title, body , userId} = post || {};
   
   return (
     <div className="w-10/12 mx-auto py-20">
       <Card>
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle><span className="font-bold">User Id:</span> {userId}</CardTitle>
+          <CardTitle><span className="font-bold">Title:</span> {title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <CardDescription>{body}</CardDescription>
+          <CardDescription><span className="font-bold">Description:</span> {body}</CardDescription>
         </CardContent>
         <CardFooter>
           <Link href={"/"}>
