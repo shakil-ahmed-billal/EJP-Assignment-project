@@ -4,7 +4,7 @@ import BlogCard from "@/components/blogCard/BlogCard";
 
 const page = async () => {
   const posts = await getPost();
-  console.log(posts);
+
   return (
     <div className="">
       <Banner></Banner>
