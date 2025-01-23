@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <AuthProvider>
           <Header></Header>
-          <main className="w-11/12 mx-auto main-h-[calc(100vh-165px)]">
+          <main className="w-11/12 mx-auto min-h-[calc(100vh-165px)]">
             {children}
           </main>
           <Footer></Footer>
