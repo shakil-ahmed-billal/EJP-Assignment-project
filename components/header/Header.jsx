@@ -1,9 +1,9 @@
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { LogOut } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { LogOut } from "lucide-react";
 
 const Header = async () => {
 
@@ -14,12 +14,14 @@ const Header = async () => {
         <div className="bg-gray-100 bg-opacity-50 sticky top-0 backdrop-blur-sm">
             <div className="flex justify-between items-center p-4 w-11/12 mx-auto">
                 <div className="">
-                    <Image
-                        src={"/blog_logo.png"}
-                        alt="blog site logo"
-                        width={80}
-                        height={80}
-                    ></Image>
+                    <Link href={'/'}>
+                        <Image
+                            src={"/blog_logo.png"}
+                            alt="blog site logo"
+                            width={80}
+                            height={80}
+                        ></Image>
+                    </Link>
                 </div>
                 <div className="space-x-2 flex items-center justify-center">
                     <Link href={"/"}> Home</Link>

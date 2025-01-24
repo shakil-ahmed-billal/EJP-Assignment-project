@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌟 Simple Blog Viewer Application 🌟
 
-## Getting Started
+A modern **Next.js** application designed to view and navigate blog posts. This project demonstrates the implementation of **dynamic routing**, **data fetching**, and **authentication** using **Kinde Auth**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Preview
+🔗 [Live Website](https://blog-next-website-seven.vercel.app/)  
+🔗 [GitHub Repository](https://github.com/shakil-ahmed-billal/EJP-Assignment-project)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🏠 Home Page
+- 📜 Displays a list of blog post titles fetched from a mock API.
+- 🔗 Each title links to a detailed page for the respective blog post.
 
-## Learn More
+### 📄 Blog Details Page
+- 🧭 Uses **dynamic routing** (`/blog/[id]`) to display blog post details.
+- 🔍 Fetches details of a specific blog post using the `id` from the URL.
 
-To learn more about Next.js, take a look at the following resources:
+### 🔒 Profile Page (Protected)
+- 🎉 Shows a static welcome message: **"Welcome to your profile!"**.
+- 🔐 Secured using **Kinde Auth**.
+- 🚫 Redirects unauthenticated users to the login page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🧭 Navigation
+- 🌟 Includes a **header** with links to:
+  - **Home**
+  - **Profile**
+- 👤 Shows a **Login** button for unauthenticated users and a **Logout** button for authenticated users.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🎨 Styling
+- ✨ Beautifully designed with **Tailwind CSS** for a clean and responsive layout.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 API Endpoints
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application uses the following mock API to fetch blog data:
+
+1. **Fetch All Posts**  
+   `GET https://jsonplaceholder.typicode.com/posts`  
+   ➡ Returns a list of blog posts with their `id`, `title`, and `body`.
+
+2. **Fetch a Specific Post by ID**  
+   `GET https://jsonplaceholder.typicode.com/posts/[id]`  
+   ➡ Returns details of a single blog post identified by `id`.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- **Node.js** installed on your system.
+- Basic knowledge of **Next.js**.
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/shakil-ahmed-billal/EJP-Assignment-project
+   cd EJP-Assignment-project
